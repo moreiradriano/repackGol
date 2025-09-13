@@ -6,10 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
- * Rspack configuration enhanced with Re.Pack defaults for React Native.
- *
- * Learn about Rspack configuration: https://rspack.dev/config/
- * Learn about Re.Pack configuration: https://re-pack.dev/docs/guides/configuration
+ * Configuração simplificada do Rspack para demonstrar Module Federation
  */
 
 export default Repack.defineRspackConfig({
@@ -34,5 +31,25 @@ export default Repack.defineRspackConfig({
       ...Repack.getAssetTransformRules(),
     ],
   },
-  plugins: [new Repack.RepackPlugin()],
+  plugins: [
+    new Repack.RepackPlugin(),
+    // Configuração simplificada do Module Federation
+    new Repack.plugins.ModuleFederationPlugin({
+      name: 'HostApp',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './MiniAppNavigator': './src/screens/MiniAppNavigator',
+      },
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.1.0',
+        },
+        'react-native': {
+          singleton: true,
+          requiredVersion: '^0.81.4',
+        },
+      },
+    }),
+  ],
 });
