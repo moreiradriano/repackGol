@@ -1,0 +1,31 @@
+MiniApp React Native CDN Information
+===================================
+
+Arquivos gerados:
+- miniapp.ios.js (900KB) - Bundle para iOS
+- miniapp.android.js (904KB) - Bundle para Android
+- miniapp.ios.js.map (3.7MB) - Source map iOS
+- miniapp.android.js.map (3.7MB) - Source map Android
+
+O que contém cada bundle:
+- Tela completa MiniAppWorking.tsx compilada
+- Todas as dependências React Native
+- Navegação e funcionalidades
+- Código JavaScript pronto para executar
+
+Para usar em um host app:
+1. Faça upload de todos os arquivos para seu CDN
+2. Configure CORS para permitir acesso de outros domínios
+3. Use a URL do miniapp.[platform].js como entry point
+
+Exemplo de configuração CORS (Apache):
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type"
+
+Exemplo de configuração CORS (Nginx):
+add_header Access-Control-Allow-Origin "*";
+add_header Access-Control-Allow-Methods "GET, POST, OPTIONS";
+add_header Access-Control-Allow-Headers "Content-Type";
+
+Build gerado em: $(date)
