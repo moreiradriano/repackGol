@@ -7,7 +7,10 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build:miniapp": "npx @callstack/repack build --config rspack.miniapp.config.mjs",
+    "serve:miniapp": "npx serve dist/miniapp -s -l 3002",
+    "deploy:miniapp": "npm run build:miniapp && npm run serve:miniapp"
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.81.4",

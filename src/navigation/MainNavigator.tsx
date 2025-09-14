@@ -5,6 +5,7 @@ import { StyleSheet } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
 import MiniAppWorking from '../federation/MiniAppWorking';
+import MiniAppCDN from '../federation/MiniAppCDN';
 
 const MainStack = createNativeStackNavigator();
 
@@ -36,6 +37,13 @@ const MainNavigator: React.FC = () => {
       <MainStack.Screen
         name="MiniApp"
         component={MiniAppWorking}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <MainStack.Screen
+        name="MiniAppCDN"
+        component={MiniAppCDN}
         options={{
           headerShown: false,
         }}

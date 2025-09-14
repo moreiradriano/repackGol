@@ -9,57 +9,6 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
-// Componente de exemplo que simula um MiniApp
-const MiniAppContent: React.FC = () => {
-  return (
-    <ScrollView style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.title}>🚀 MiniApp Funcionando!</Text>
-        <Text style={styles.subtitle}>
-          Este é um exemplo de módulo que simula o carregamento federado usando
-          React.lazy() e Suspense
-        </Text>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>✅ Recursos Implementados:</Text>
-          <Text style={styles.cardItem}>• Carregamento assíncrono</Text>
-          <Text style={styles.cardItem}>• React Suspense</Text>
-          <Text style={styles.cardItem}>• Tratamento de erro</Text>
-          <Text style={styles.cardItem}>• Loading states</Text>
-          <Text style={styles.cardItem}>• Retry functionality</Text>
-        </View>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>🔧 Tecnologias:</Text>
-          <Text style={styles.cardItem}>• React Native 0.81.4</Text>
-          <Text style={styles.cardItem}>• Re.Pack 5.2.0</Text>
-          <Text style={styles.cardItem}>• React Navigation 6.x</Text>
-          <Text style={styles.cardItem}>• TypeScript</Text>
-        </View>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>📱 Funcionalidades:</Text>
-          <Text style={styles.cardItem}>• Navegação entre telas</Text>
-          <Text style={styles.cardItem}>• Interface responsiva</Text>
-          <Text style={styles.cardItem}>• Estados de carregamento</Text>
-          <Text style={styles.cardItem}>• Tratamento de erros</Text>
-        </View>
-
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Funcionalidade 1</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, styles.secondaryButton]}>
-            <Text style={[styles.buttonText, styles.secondaryButtonText]}>
-              Funcionalidade 2
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    </ScrollView>
-  );
-};
-
 // Componente principal com carregamento assíncrono
 const MiniAppWorking: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [loading, setLoading] = React.useState(true);
@@ -70,7 +19,7 @@ const MiniAppWorking: React.FC<{ navigation: any }> = ({ navigation }) => {
     const loadModule = async () => {
       try {
         // Simular delay de carregamento
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 4000));
         setLoading(false);
       } catch (err) {
         console.error('Erro ao carregar:', err);
@@ -148,7 +97,6 @@ const MiniAppWorking: React.FC<{ navigation: any }> = ({ navigation }) => {
         </TouchableOpacity>
         <Text style={styles.headerTitle}>MiniApp</Text>
       </View>
-      <MiniAppContent />
     </SafeAreaView>
   );
 };

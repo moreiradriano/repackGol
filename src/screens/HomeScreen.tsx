@@ -32,7 +32,14 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
             style={[styles.button, styles.miniAppButton]}
             onPress={() => navigation.navigate('MiniApp')}
           >
-            <Text style={styles.buttonText}>Abrir MiniApp</Text>
+            <Text style={styles.buttonText}>Abrir MiniApp1</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.button, styles.cdnButton]}
+            onPress={() => navigation.navigate('MiniAppCDN')}
+          >
+            <Text style={styles.buttonText}>MiniApp do CDN 22</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -78,6 +85,9 @@ const styles = StyleSheet.create({
   },
   miniAppButton: {
     backgroundColor: '#34C759',
+  },
+  cdnButton: {
+    backgroundColor: '#FF9500',
   },
   buttonText: {
     color: 'white',
