@@ -1,0 +1,33 @@
+DetailScreen React Native CDN Information
+========================================
+
+Arquivos gerados:
+- detailscreen.[hash].js - Bundle JavaScript (3.47 KiB)
+- cdn-info.txt - Este arquivo de informações
+
+O que contém o bundle:
+- Tela completa DetailScreen.tsx compilada
+- Todas as dependências React Native
+- Navegação e funcionalidades
+- Código JavaScript pronto para executar
+
+Para usar em um host app:
+1. Faça upload do arquivo .js para seu CDN
+2. Configure CORS para permitir acesso de outros domínios
+3. Use a URL do detailscreen.[hash].js como entry point
+
+Exemplo de configuração CORS (Apache):
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type"
+
+Exemplo de configuração CORS (Nginx):
+add_header Access-Control-Allow-Origin "*";
+add_header Access-Control-Allow-Methods "GET, POST, OPTIONS";
+add_header Access-Control-Allow-Headers "Content-Type";
+
+URLs de exemplo:
+- https://seu-cdn.com/detailscreen/detailscreen.[hash].js
+- https://cdn.example.com/detailscreen/detailscreen.[hash].js
+
+Build gerado em: Dom 14 Set 2025 08:55:47 -03

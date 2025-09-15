@@ -41,6 +41,13 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           >
             <Text style={styles.buttonText}>MiniApp do CDN 22</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.button, styles.detailScreenButton]}
+            onPress={() => navigation.navigate('DetailScreenCDN')}
+          >
+            <Text style={styles.buttonText}>DetailScreen do CDN</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
@@ -88,6 +95,9 @@ const styles = StyleSheet.create({
   },
   cdnButton: {
     backgroundColor: '#FF9500',
+  },
+  detailScreenButton: {
+    backgroundColor: '#9B59B6',
   },
   buttonText: {
     color: 'white',

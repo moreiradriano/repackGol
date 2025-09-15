@@ -5,9 +5,9 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
-  SafeAreaView,
   ActivityIndicator,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Componente principal com carregamento assíncrono
 const MiniAppWorking: React.FC<{ navigation: any }> = ({ navigation }) => {
@@ -97,6 +97,9 @@ const MiniAppWorking: React.FC<{ navigation: any }> = ({ navigation }) => {
         </TouchableOpacity>
         <Text style={styles.headerTitle}>MiniApp</Text>
       </View>
+      <ScrollView>
+        <Text style={styles.title}>• Bundler: Re.Pack</Text>
+      </ScrollView>
     </SafeAreaView>
   );
 };

@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
 import MiniAppWorking from '../federation/MiniAppWorking';
 import MiniAppCDN from '../federation/MiniAppCDN';
+import DetailScreenCDN from '../federation/DetailScreenCDN';
 
 const MainStack = createNativeStackNavigator();
 
@@ -14,7 +15,6 @@ const MainNavigator: React.FC = () => {
     <MainStack.Navigator
       screenOptions={{
         headerTitle: 'RepackApp',
-        headerBackTitleVisible: false,
         headerStyle: styles.header,
         headerTitleStyle: styles.headerTitle,
         headerTintColor: 'rgba(255,255,255,1)',
@@ -44,6 +44,13 @@ const MainNavigator: React.FC = () => {
       <MainStack.Screen
         name="MiniAppCDN"
         component={MiniAppCDN}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <MainStack.Screen
+        name="DetailScreenCDN"
+        component={DetailScreenCDN}
         options={{
           headerShown: false,
         }}

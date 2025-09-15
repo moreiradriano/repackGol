@@ -15,7 +15,7 @@ const DetailScreen: React.FC<DetailScreenProps> = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Tela de Detalhes123</Text>
+        <Text style={styles.title}>Tela de Detalhes</Text>
         <Text style={styles.description}>
           Esta é uma tela de exemplo que demonstra a navegação entre telas no
           aplicativo principal.

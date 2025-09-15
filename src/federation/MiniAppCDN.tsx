@@ -3,12 +3,12 @@ import {
   View,
   Text,
   TouchableOpacity,
-  SafeAreaView,
   StyleSheet,
   ActivityIndicator,
   TextInput,
   Alert,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface MiniAppCDNProps {
   navigation: any;
@@ -45,8 +45,10 @@ const MiniAppCDN: React.FC<MiniAppCDNProps> = ({ navigation }) => {
       );
 
       // Simular execução do bundle (em produção, você usaria ScriptManager do Re.Pack)
+      console.log('🔄 Simulando execução do bundle do CDN...');
+
       // Por enquanto, vamos simular que o MiniApp foi carregado
-      await new Promise<void>(resolve => setTimeout(resolve, 1000));
+      await new Promise<void>(resolve => setTimeout(resolve, 2000));
 
       // Simular que o MiniApp foi carregado com sucesso
       // Em produção, aqui você faria:

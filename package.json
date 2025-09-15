@@ -10,7 +10,12 @@
     "test": "jest",
     "build:miniapp": "npx @callstack/repack build --config rspack.miniapp.config.mjs",
     "serve:miniapp": "npx serve dist/miniapp -s -l 3002",
-    "deploy:miniapp": "npm run build:miniapp && npm run serve:miniapp"
+    "deploy:miniapp": "npm run build:miniapp && npm run serve:miniapp",
+    "build:detailscreen": "npx @callstack/repack build --config rspack.detailscreen.config.mjs",
+    "build:detailscreen:ios": "npx @callstack/repack build --platform ios --config rspack.detailscreen.config.mjs",
+    "build:detailscreen:android": "npx @callstack/repack build --platform android --config rspack.detailscreen.config.mjs",
+    "serve:detailscreen": "npx serve dist/detailscreen -s -l 3003",
+    "deploy:detailscreen": "npm run build:detailscreen && npm run serve:detailscreen"
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.81.4",
@@ -18,12 +23,14 @@
     "@react-navigation/native-stack": "^7.3.26",
     "react": "19.1.0",
     "react-native": "0.81.4",
-    "react-native-safe-area-context": "^5.5.2",
+    "react-native-safe-area-context": "^5.6.1",
     "react-native-screens": "^4.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@babel/runtime": "^7.25.0",
     "@callstack/repack": "^5.2.0",
     "@react-native-community/cli": "20.0.0",
@@ -38,11 +45,14 @@
     "@types/jest": "^29.5.13",
     "@types/react": "^19.1.0",
     "@types/react-test-renderer": "^19.1.0",
+    "babel-loader": "^10.0.0",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-test-renderer": "19.1.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
   },
   "engines": {
     "node": ">=20"
